@@ -1,0 +1,36 @@
+﻿
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CurrentCountList"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+         <TextView 
+             android:id="@+id/genView"
+             android:layout_width="100dp"
+             android:layout_height="50dp" >
+         </TextView>
+         <TextView
+            android:id="@+id/houseView"
+            android:layout_width="70dp"
+            android:layout_height="50dp" >
+        </TextView>
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="50dp"
+            android:layout_height="50dp" >
+        </TextView>
+        <TextView
+            android:id="@+id/lastCountView"
+            android:layout_width="50dp"
+            android:layout_height="50dp" >
+        </TextView>
+        <EditText
+            android:id="@+id/todayCount"
+            android:inputType="number"
+            android:layout_width="50dp"
+            android:layout_height="50dp" >
+        </EditText>
+</LinearLayout>

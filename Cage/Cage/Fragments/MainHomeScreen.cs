@@ -26,6 +26,7 @@ namespace Cage.Fragments
         TextView lblinit;
         Button uploadButton;
         Button ExitApp;
+        int recorCount;
         Database.Device device = Database.Context.Device ?? new Database.Device();
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -154,7 +155,7 @@ namespace Cage.Fragments
     //                builder.SetMessage(device.Trans("Data Uploaded"));
     //                builder.Create().Show();
                 }
-                int recorCount = (from count in Database.Context.CageEggs select count).Count();
+                recorCount = (from count in Database.Context.CageEggs select count).Count();
                 mProgressBar.Visibility = ViewStates.Gone;
                 uploadButton.Text = device.Trans("Upload Data") + $"({recorCount})";
             };
@@ -180,16 +181,27 @@ namespace Cage.Fragments
 
         private async Task<string> Upload()
         {
+            string fullresult = string.Empty;
             string result = string.Empty;
             string result2 = string.Empty;
             Database.Context context = new Database.Context();
-            await Task.Run(() => {
-                result = context.Upload();
-            });
-                
-            result2 = await UploadHandCounts();
+            recorCount = (from count in Database.Context.CageEggs select count).Count();
             
-            return $"Production data:{result} \n Count data:{result2}";
+            await Task.Run(() => {
+                do
+                {
+                    result = context.Upload() +"\n";
+                    fullresult += result;
+                    recorCount = (from count in Database.Context.CageEggs select count).Count();
+                } while (recorCount > 0 & result.Contains("Success", StringComparison.OrdinalIgnoreCase));
+                
+            });
+            if (!device.ExternalData)
+            {
+                result2 = await UploadHandCounts();
+                result2 = $"Count data:{result2}";
+            }
+            return $"Production data:{fullresult} \n {result2}";
             
         }
 

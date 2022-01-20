@@ -939,9 +939,9 @@ map_managed_to_java:
 	.long	.L.managed_type_name.465
 	.long	.L.java_type_name.450
 	.long	.L.managed_type_name.466
-	.long	.L.java_type_name.451
-	.long	.L.managed_type_name.467
 	.long	.L.java_type_name.452
+	.long	.L.managed_type_name.467
+	.long	.L.java_type_name.451
 	.long	.L.managed_type_name.468
 	.long	.L.java_type_name.454
 	.long	.L.managed_type_name.469

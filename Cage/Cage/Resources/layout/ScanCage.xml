@@ -1,0 +1,99 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scanCageLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+        <CheckBox
+        android:focusable="false"
+        android:text="Non Layer"
+        android:layout_marginTop="15dp"
+        android:layout_width="200dp"
+        android:layout_height="50.0dp"
+        android:textSize="25dp"
+        android:id="@+id/isNonLayer" />
+        <ImageButton
+        android:contentDescription="@string/app_name"
+        android:id="@+id/imgbutton"
+        android:layout_marginLeft="50dp"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:background="@drawable/hyline_logo_chick"
+        android:scaleType="fitCenter"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:textSize="35dp"
+        android:id="@+id/barCodeValue" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+        android:layout_width="100dp"
+        android:layout_height="50.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:textSize="35dp"
+        android:text="Cage:"
+        android:id="@+id/lblCage"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            android:maxLength="5"
+            android:inputType="text"
+            android:textSize="35dp"
+            android:id="@+id/txtScanText" />
+    </LinearLayout>
+    <CheckBox
+    android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/chkInputEnable"
+    android:text="Hand-Enter Cage"
+    android:textSize="25dp"
+    android:checked="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="30dp"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+        <Button
+            android:text="Defect"
+            android:layout_width="0dp"
+            android:layout_weight=".30"
+            android:layout_height="75dp"
+            android:layout_marginRight="10dp"
+            android:tag="DF"
+            android:id="@+id/btnDefect" />
+        <Button
+            android:text="2nd Good Egg"
+            android:tag="2E"
+            android:layout_width="0dp"
+            android:layout_weight=".30"
+            android:layout_height="75dp"
+            android:id="@+id/btnSecondEgg" />
+    </LinearLayout>
+    <!-- <Button
+        android:text="Blood"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/btnBlood" />-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/layerCount"/>
+</LinearLayout>

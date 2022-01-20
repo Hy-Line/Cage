@@ -940,9 +940,9 @@ map_managed_to_java:
 	.xword	.L.managed_type_name.465
 	.xword	.L.java_type_name.450
 	.xword	.L.managed_type_name.466
-	.xword	.L.java_type_name.451
-	.xword	.L.managed_type_name.467
 	.xword	.L.java_type_name.452
+	.xword	.L.managed_type_name.467
+	.xword	.L.java_type_name.451
 	.xword	.L.managed_type_name.468
 	.xword	.L.java_type_name.454
 	.xword	.L.managed_type_name.469

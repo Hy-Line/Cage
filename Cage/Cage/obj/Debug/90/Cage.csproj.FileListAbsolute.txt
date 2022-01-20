@@ -8,6 +8,7 @@ C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\bin\
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\build.props
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\adb.props
+C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\Cage.csproj.AssemblyReference.cache
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\res.flag
@@ -326,4 +327,3 @@ C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Debug\90\Cage.csproj.AssemblyReference.cache

@@ -939,9 +939,9 @@ map_managed_to_java:
 	.quad	.L.managed_type_name.465
 	.quad	.L.java_type_name.450
 	.quad	.L.managed_type_name.466
-	.quad	.L.java_type_name.451
-	.quad	.L.managed_type_name.467
 	.quad	.L.java_type_name.452
+	.quad	.L.managed_type_name.467
+	.quad	.L.java_type_name.451
 	.quad	.L.managed_type_name.468
 	.quad	.L.java_type_name.454
 	.quad	.L.managed_type_name.469

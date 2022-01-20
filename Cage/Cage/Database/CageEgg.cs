@@ -514,11 +514,26 @@ namespace Cage.Database
 
             httpWebRequest.ReadWriteTimeout = -1; // Infinite
             httpWebRequest.Timeout = -1; // Infinite
+            int MaxUpload = 10000;
+            int recorCount=0;
+            object httpLock = new object();
+
+            lock (httpLock)
             try
             {
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                    string json = JsonConvert.SerializeObject(Context.CageEggs);
+                    recorCount = (from count in Database.Context.CageEggs select count).Count();
+                    string json;
+                    if (recorCount > MaxUpload)
+                    {
+                        json = JsonConvert.SerializeObject(Context.CageEggs.GetRange(0, MaxUpload));
+                    }
+                    else
+                    {
+                        json = JsonConvert.SerializeObject(Context.CageEggs);
+                    }
+                        
                     streamWriter.Write(json);
                     streamWriter.Flush();
                     streamWriter.Close();
@@ -534,7 +549,15 @@ namespace Cage.Database
                                 result = reader.ReadToEnd().Replace("\"", "");
                                 if (result.Contains("Success") == true)
                                 {
-                                    Context._cageEggs = new List<CageEgg>();
+                                    if (recorCount > MaxUpload)
+                                    { 
+                                        Context._cageEggs.RemoveRange(0, MaxUpload);                                       
+                                    }
+                                    else
+                                    {
+                                        Context._cageEggs = new List<CageEgg>();
+                                    }
+                                    
                                     //string status = string.Empty;
                                     XmlSerializer serializer = new XmlSerializer(typeof(List<CageEgg>));
                                     string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "CageEgg.xml");
@@ -546,10 +569,13 @@ namespace Cage.Database
                                         }
                                     }
                                     catch (Exception e)
-                                    {
-                                        //status = e.Message;  changed 2/8/21
+                                    {                                        
                                         result = e.Message;
                                     }
+                                }
+                                else
+                                {
+                                    return result;
                                 }
                             }
                         }

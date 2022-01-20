@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Production</string>
+    <string name="title_setup">Setup</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Cage</string>
+    <string name="title_eggcount">Egg Count</string>
+    <string name="title_notifications">List</string>
+    <string name="title_SP">Español</string>
+    <!--<string name="navmenu">"@menu/navigation"</string>
+    <string name="navmenuforeign">"@menu/navigationForeign"</string>-->
+</resources>

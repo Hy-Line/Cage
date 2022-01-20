@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.Custom" parent="@android:style/Theme.DeviceDefault"><item name="android:colorPrimary">#ff304ffe</item><item name="android:colorPrimaryDark">#ff283593</item><item name="android:colorAccent">#ff00b0ff</item><item name="android:textColorPrimary">#ff212121</item><item name="android:textColorSecondary">#ff212121</item><item name="android:colorButtonNormal">#ffbdbdbd</item><item name="android:colorControlNormal">#fffafafa</item><item name="android:colorControlActivated">#ffeeeeee</item><item name="android:colorBackground">@android:color/white</item><item name="android:windowBackground">?android:attr/colorBackground</item></style>
+</resources>
