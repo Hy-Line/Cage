@@ -34,6 +34,10 @@ namespace Cage.Database
         public string LastLoc { get; set; }
         public string USERNAME { get; set; }
         public string Initials { get; set; }
+        public string MarketOn { get; set; }
+        public string HatcheryOn { get; set; }
+        public string EQOn { get; set; }
+
 
         private readonly object threadLock = new object();
         public string Save()

@@ -390,14 +390,12 @@ namespace Cage.Database
         //        url = url.TrimEnd(url[url.Length - 1]) + "?House=" + House;
         //        //url +="?House=" + House;
         //    }
-            
         //    HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
         //    httpWebRequest.ContentType = "application/json; charset=utf-8";
         //    httpWebRequest.Method = "GET";
         //    httpWebRequest.Timeout = 60000; // one minute
         //    try
         //    {
-
         //        using (var response = httpWebRequest.GetResponse() as HttpWebResponse)
         //        {
         //            if (httpWebRequest.HaveResponse && response != null)
@@ -406,7 +404,6 @@ namespace Cage.Database
         //                {
         //                    string result = reader.ReadToEnd();
         //                    counts = JsonConvert.DeserializeObject<List<Database.CURRENT_COUNT>>(result);
-
         //                }
         //            }
         //        }
@@ -558,7 +555,6 @@ namespace Cage.Database
                                         Context._cageEggs = new List<CageEgg>();
                                     }
                                     
-                                    //string status = string.Empty;
                                     XmlSerializer serializer = new XmlSerializer(typeof(List<CageEgg>));
                                     string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "CageEgg.xml");
                                     try
@@ -592,11 +588,11 @@ namespace Cage.Database
                         using (var reader = new StreamReader(errorResponse.GetResponseStream()))
                         {
                             string error = reader.ReadToEnd();
-                            result = error;
+                            result += error;
                         }
                     }
                 }
-                if (string.IsNullOrEmpty(result)) result = "Could not connect to web service";
+                if (string.IsNullOrEmpty(result)) result = "ERROR: Could not connect to web service";
             }
 
             return result;

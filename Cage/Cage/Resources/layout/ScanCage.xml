@@ -48,6 +48,7 @@
         android:text="Cage:"
         android:id="@+id/lblCage"/>
         <EditText
+            android:enabled="false"
             android:layout_width="230dp"
             android:layout_height="60dp"
             android:maxLength="5"
@@ -69,6 +70,7 @@
         android:layout_height="110dp"
         android:orientation="horizontal">
         <Button
+            android:focusable="false"
             android:text="Defect"
             android:layout_width="0dp"
             android:layout_weight=".30"
@@ -77,6 +79,7 @@
             android:tag="DF"
             android:id="@+id/btnDefect" />
         <Button
+            android:focusable="false"
             android:text="2nd Good Egg"
             android:tag="2E"
             android:layout_width="0dp"
@@ -91,6 +94,7 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/btnBlood" />-->
     <TextView
+        android:focusable="false"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:textSize="25dp"

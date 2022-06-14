@@ -46,7 +46,7 @@
 
 	/* 2: Cage.dll */
 	/* uncompressed_file_size */
-	.long	220160
+	.long	220672
 	/* loaded */
 	.byte	0
 	/* data */

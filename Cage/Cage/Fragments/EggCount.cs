@@ -232,6 +232,40 @@ namespace Cage.Fragments
                     txtEggEQ.Visibility = ViewStates.Visible;
                     txtEggAcc.Visibility = ViewStates.Visible;
                     btnSaveCount.Visibility = ViewStates.Visible;
+
+                    if (!string.IsNullOrEmpty(count.MarketOn) && count.MarketOn.Length>0 )
+                    {
+                        lblMarket.SetTextColor(Android.Graphics.Color.Blue);
+                        txtEggMarket.SetTextColor(Android.Graphics.Color.Blue);
+                    }
+                    else
+                    {
+                        lblMarket.SetTextColor(Android.Graphics.Color.DarkGray); 
+                        txtEggMarket.SetTextColor(Android.Graphics.Color.DarkGray);
+                    }
+
+                    if (!string.IsNullOrEmpty(count.HatcheryOn) && count.HatcheryOn.Length > 0)
+                    {
+                        lblHatchery.SetTextColor(Android.Graphics.Color.Red); 
+                        txtEggHat.SetTextColor(Android.Graphics.Color.Red);
+                    }
+                    else
+                    {
+                        lblHatchery.SetTextColor(Android.Graphics.Color.DarkGray); 
+                        txtEggHat.SetTextColor(Android.Graphics.Color.DarkGray);
+                    }
+
+                    if (!string.IsNullOrEmpty(count.EQOn) && count.EQOn.Length > 0)
+                    { 
+                        lblEQ.SetTextColor(Android.Graphics.Color.Green); 
+                        txtEggEQ.SetTextColor(Android.Graphics.Color.Green);
+                    }
+                    else
+                    {
+                        lblEQ.SetTextColor(Android.Graphics.Color.DarkGray);
+                        txtEggEQ.SetTextColor(Android.Graphics.Color.DarkGray);
+                    }
+
                     txtGen.Text = count.GEN;
                     txtLine.Text = count.LINE;
                     txtDate.Text = count.PROD_DATE;

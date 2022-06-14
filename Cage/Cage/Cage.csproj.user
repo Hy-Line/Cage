@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>tablet_m-dpi_10_1in_pie_9_0_-_api_28</SelectedDevice>
+    <SelectedDevice>Datalogic MEMOR 10</SelectedDevice>
     <DefaultDevice>tablet_m-dpi_10_1in_pie_9_0_-_api_28</DefaultDevice>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <ProjectView>ProjectFiles</ProjectView>
-    <ActiveDebugProfile>tablet_m-dpi_10_1in_pie_9_0_-_api_28</ActiveDebugProfile>
+    <ActiveDebugProfile>Datalogic MEMOR 10</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

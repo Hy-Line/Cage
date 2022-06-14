@@ -26,5 +26,5 @@ using Android.App;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2022.1.7.118")]
-[assembly: AssemblyFileVersion("2022.1.7.117")]
+[assembly: AssemblyVersion("2022.5.17.118")]
+[assembly: AssemblyFileVersion("2022.5.17.117")]

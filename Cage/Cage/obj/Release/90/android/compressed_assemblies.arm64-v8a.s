@@ -26,7 +26,7 @@
 
 	/* 2: Cage.dll */
 	/* uncompressed_file_size */
-	.word	220160
+	.word	220672
 	/* loaded */
 	.byte	0
 	/* data */

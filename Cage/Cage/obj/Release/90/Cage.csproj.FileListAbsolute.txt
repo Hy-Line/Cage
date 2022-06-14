@@ -228,3 +228,4 @@ C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\jshattuck.HYLINE\source\repos\Hyline.Mobile.Android\Cage\Cage\Cage\obj\Release\90\Cage.csproj.AssemblyReference.cache

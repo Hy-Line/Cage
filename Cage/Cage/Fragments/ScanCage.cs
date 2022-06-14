@@ -165,7 +165,7 @@ namespace Cage.Fragments
             {
                 foreach (ITrigger tr in km.AvailableTriggers)
                 {
-                    tr.SetEnabled(!chkInputEnable.Checked); //false
+                    tr.SetEnabled(!chkInputEnable.Checked);
                 }
 
                 txtScanText.Enabled = chkInputEnable.Checked; 
@@ -173,16 +173,6 @@ namespace Cage.Fragments
                 {txtScanText.RequestFocus();}
                 else
                 {txtScanText.ClearFocus();}
-
-                //}
-                //else
-                //{
-                //    foreach (ITrigger tr in km.AvailableTriggers)
-                //    {
-                //        tr.SetEnabled(true);
-                //    }
-                //    //txtScanText.Enabled = false;
-                //}
             };
 
             layerCount.Text = layerNon + recorCount + " " + _initials;
@@ -238,7 +228,10 @@ namespace Cage.Fragments
                     else
                     {
                         chkInputEnable.Checked = false;
-                        OnScanComplete();
+                        scannerValue = txtScanText.Text.ToUpper();
+                        Database.Context.LastScanValue = scannerValue;
+                        WriteRec("EN");
+                        //OnScanComplete();
                     }
                 }
                 return;
@@ -249,17 +242,17 @@ namespace Cage.Fragments
         void DefButtHandle(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Database.Context.LastScanValue)) return;
-            string butxt = ((Button)sender).Tag.ToString();
+            string btntxt = ((Button)sender).Tag.ToString();
             scannerValue = Database.Context.LastScanValue;
-            WriteRec(butxt);
+            WriteRec(btntxt);
         }
 
-        void OnScanComplete()
-        {
-            scannerValue = txtScanText.Text.ToUpper();
-            Database.Context.LastScanValue = scannerValue;
-            WriteRec("EN");
-        }
+        //void OnScanComplete()
+        //{
+        //    scannerValue = txtScanText.Text.ToUpper();
+        //    Database.Context.LastScanValue = scannerValue;
+        //    WriteRec("EN");
+        //}
 
         void IReadListener.OnRead(IDecodeResult scanValue)
         {   
